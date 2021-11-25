@@ -1,0 +1,14 @@
+public class Factorial {
+	public static void main(String[] args) {
+		int fact=0;
+		int output =factorial(fact);
+		System.out.println(output);
+	}
+public static int factorial(int num) {
+	int fact=1;
+	for(int i=1;i<=num;i++) {
+		fact=fact*i;
+	}
+	return fact;
+}
+}
