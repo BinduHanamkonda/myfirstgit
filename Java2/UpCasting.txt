@@ -1,0 +1,18 @@
+public class Developer {
+public void work() {
+	System.out.println("develop code...");
+}
+}
+class Mother extends Developer{
+	public void cook() {
+		System.out.println("cook food..");
+	}
+}
+class MainClass{
+	public static void main(String[] args) {
+		Developer d=(Developer)new Mother();
+		d.work();
+		Mother m=(Mother)d;
+		m.cook();
+	}
+}
