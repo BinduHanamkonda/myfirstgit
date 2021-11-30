@@ -1,0 +1,50 @@
+  package com.technoelevate.collection;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class ShoppingCart {
+private static ArrayList<MyArray> items =new ArrayList<MyArray>();
+public static void main(String[] args) {
+   MyArray i1=new MyArray("Soaps",10);
+   MyArray i2=new MyArray("Brushes",25);
+   MyArray i3=new MyArray("Combs",20);
+   MyArray i4=new MyArray("Shampoos",100);
+   MyArray i5=new MyArray("Bottles",50);
+   MyArray i6=new MyArray("Biscuits",100);
+   MyArray i7=new MyArray("Chocolates",10);
+   MyArray i8=new MyArray("Books",20);
+items.add(i1);
+items.add(i2);
+items.add(i3);
+items.add(i4);
+items.add(i5);
+items.add(i6);
+items.add(i7);
+items.add(i8);
+System.out.println("Grocery items:");
+getNames();
+System.out.println("View items:");
+viewNames();
+System.out.println("Remove items:");
+removeNames();
+}
+public static void getNames() {
+	Iterator<MyArray> itr=items.iterator();
+	while(itr.hasNext()) {
+		MyArray arr=(MyArray)itr.next();
+		System.out.println(arr.getName()+"of "+arr.getQuantity());
+}
+}
+private static void viewNames() {
+	for(int i =0;i<items.size();i++) {
+		 System.out.println(items.get(i).getName()+"  of  "+items.get(i).getQuantity());
+	 }
+}
+private static void removeNames() {
+ for(int i =3;i<items.size();i++) {
+	 System.out.println(items.get(i).getName()+"  of  "+items.get(i).getQuantity());
+ }
+}
+
+}
